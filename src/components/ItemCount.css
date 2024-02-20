@@ -1,0 +1,39 @@
+/* ItemCount.css */
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    margin: 0 5px;
+  }
+  
+  .quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
