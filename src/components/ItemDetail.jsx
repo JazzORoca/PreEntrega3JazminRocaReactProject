@@ -8,6 +8,7 @@ const ItemDetail = ({ producto }) => {
   const [cart,setCart] = useState(false)
 
   const {agregarCarrito} = useContext(CartContext)
+
   const onAdd = (count) => {
 
     setCart(true)
@@ -38,8 +39,9 @@ const ItemDetail = ({ producto }) => {
           <p className="card-text" style={{ fontFamily: 'sans-serif', fontWeight: 'bolder', textAlign: 'center' }}>
             {producto.descripcion}
           </p>
-
-          {cart ? <Link to={'/cart'}  className="btn btn-secondary btn-block">Ir al carrito</Link> : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}/>}
+          {producto.stock == 0 ? <h2>EL PRODUCTO NO TIENE STOCK</h2> : (
+            cart ? <Link to={'/cart'} className='btn btn-link text-decoration-none'>Ir al carrito</Link> : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}/>
+        )}
         </div>
       </div>
     </div>

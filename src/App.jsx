@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import Contacto from './components/Contacto';
 import Error from './components/Error';
 import Footer from './components/Footer';
@@ -27,6 +28,7 @@ function App() {
       <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
       <Route path='/contacto' element={<Contacto />} >/</Route>
       <Route path='/cart' element={<Cart/>}/>
+<Route path='/checkout' element={<Checkout />} />
 
       <Route path='*' element={<Error/>}/>
       
